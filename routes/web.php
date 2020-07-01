@@ -27,7 +27,10 @@ Route::get('/test/{angka}', function($angka){
     return view('test', ['angka' => $angka]);
 });
 Route::get('/master', function(){
-    return view('master');
+    return view('adminlte/master');
+});
+Route::get('/items', function(){
+    return view('items.index');
 });
 
 Route::get('/halo/{nama}', function($nama){
