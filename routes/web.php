@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('table.table');
+});
+
+Route::get('/data-tables', function () {
+    return view('table.data-tables');
 });
 
 Route::get('/register', function () {
@@ -31,6 +35,10 @@ Route::get('/master', function(){
 });
 Route::get('/items', function(){
     return view('items.index');
+});
+
+Route::get('/items/create', function(){
+    return view('items.create');
 });
 
 Route::get('/halo/{nama}', function($nama){
